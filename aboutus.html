@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+
+  <!-- 共用 header CSS（如果有） -->
+  <link rel="stylesheet" href="../assets/Css/hp.css">
+
+  <!-- About 專用 CSS -->
+  <link rel="stylesheet" href="../assets/Css/aboutus.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- header（沿用你現有的） -->
+   <header class="header">
+  <div class="logo">
+    <a href="index.html"><img src="../assets/Images/iconwhite.png" alt="Logo"></a>
+    
+  </div>
+
+  <nav class="nav">
+    <ul>
+      <li class="dropdown">
+        <a href="list.html" class="dropdown-toggle">全部商品</a>
+        
+      </li>
+
+
+      <li class="dropdown">
+        <a href="#">最新活動</a>
+        
+      </li>
+
+      <li class="dropdown">
+        <a href="#">品牌導覽</a>
+        
+      </li>
+
+      <li class="dropdown">
+        <a href="#">會員需知</a>
+        
+      </li>
+
+      <li class="dropdown">
+        <a href="#">門市</a>
+        
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 右側搜尋區塊 -->
+  <div class="right-box">
+
+    <!-- 上方 icon 列 -->
+    <div class="big">
+
+
+      <div class="user-menu">
+        <span class="material-icons">person</span>
+
+        <ul class="user-dropdown">
+          <li><a href="personinformation.html">會員專區</a></li>
+          <li><a href="#" id="open-login">會員登入 / 註冊</a></li>
+        </ul>
+      </div>
+
+      <span class="material-icons">shopping_cart</span>
+
+    </div>
+
+    
+    <!-- 登入／註冊彈窗 -->
+    <div class="modal" id="auth-modal">
+      <div class="modal-content">
+
+        <span class="close-btn" id="close-auth">&times;</span>
+
+        <!-- 登入區 -->
+        <div class="login-box">
+          <h2>會員登入</h2>
+          <input type="email" placeholder="Email" required id="login-email">
+          <input type="password" placeholder="密碼" required id="login-password">
+          <button id="login-btn">登入</button>
+
+          <p class="switch">還沒有帳號？ <span id="to-register"  class="ftc">立即註冊</span></p>
+        </div>
+
+        <!-- 註冊區 -->
+        <div class="register-box" style="display:none;">
+          <h2>會員註冊</h2>
+          <input type="text" placeholder="姓名" required id="register-name">
+          <input type="email" placeholder="Email" required id="register-email">
+          <input type="password" placeholder="密碼" required id="register-password">
+          <button id="register-btn">註冊</button>
+
+          <p class="switch">已有帳號？ <span id="to-login" class="ftc">登入</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    
+
+    <!-- 搜尋框 -->
+    <div class="search">
+      <input type="text" placeholder="搜尋商品...">
+      <button>搜尋</button>
+    </div>
+
+  </div>
+
+</header>
+
+
+  <!-- About Us 主內容 -->
+  <main class="about-page">
+
+    <!-- 頁面標題 -->
+    <section class="about-hero">
+      <h1>關於我們</h1>
+      <p>我們是一個以學習與實作為核心的團隊，透過專題整合設計與技術能力。</p>
+    </section>
+
+    <!-- 成員介紹 -->
+    <section class="team-section">
+      <h2>團隊成員</h2>
+
+      <div class="team-grid">
+
+        <div class="member-card">
+          <img src="../assets/Images/Hsin.jpg" alt="member">
+          <h3>謝信棠</h3>
+          <p class="role">前端開發</p>
+          <p class="desc">負責版型設計、HTML/CSS 結構與 RWD 規劃、負責 JavaScript 功能、互動效果與資料處理。
+
+          </p>
+        </div>
+
+        <div class="member-card">
+          <img src="../assets/Images/bochang.jpg" alt="member">
+          <h3>陳柏蒼</h3>
+          <p class="role">架構構思</p>
+          <p class="desc">負責每個頁面的設計架構、整體的框架構思。</p>
+        </div>
+
+        <div class="member-card">
+          <img src="../assets/Images/bobh.jpg" alt="member">
+          <h3>謝博仁</h3>
+          <p class="role">企劃與測試</p>
+          <p class="desc">負責專題企劃、使用者流程與測試紀錄、進度回報。。</p>
+        </div>
+
+        <div class="member-card">
+          <img src="../assets/Images/uche.jpg" alt="member">
+          <h3>陳與喆</h3>
+          <p class="role">資源整理</p>
+          <p class="desc">負責主題構想，網站設計參考和圖片等資源。</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 成員心得 -->
+    <section class="reflection-section">
+      <h2>成員心得</h2>
+
+      <div class="reflection-item">
+        <h4>謝信棠</h4>
+        <p>
+          好玩讚讚。
+        </p>
+      </div>
+
+      <div class="reflection-item">
+        <h4>陳柏蒼</h4>
+        <p>
+          這真是場酣暢淋灕的期末
+        </p>
+      </div>
+
+      <div class="reflection-item">
+        <h4>謝博仁</h4>
+        <p>
+          這次專題讓我理解團隊合作的重要性，也提升了我在專案規劃與溝通上的能力。
+        </p>
+      </div>
+
+      <div class="reflection-item">
+        <h4>陳與喆</h4>
+        <p>
+          在實作的時候，我慢慢發現，其實只要把上課學到的東西，還有之前作業用過的程式碼整理在一起，
+          就能做出一個基本的網站。不過真的動手做起來還是滿難的，常常要一直試、一直改，程式才會正常跑。除了寫程式，
+          網站的排版也很花時間，像是畫面怎麼排、內容怎麼放才會好看，都要想很久。有時候只是改一點點，整個畫面就亂掉。
+          雖然過程有點累，但也讓我更清楚，網站不是隨便做就好，而是要一直調整才會完成。
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
