@@ -1,0 +1,62 @@
+.brand {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* 手機自動換行 */
+}
+
+.brand-image img {
+  width: 500px;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.brand-content {
+  max-width: 600px;
+}
+
+.brand-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.brand-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.brand-content button {
+  padding: 12px 28px;
+  border: none;
+  background-color: #1d3557;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.brand-content button:hover {
+  background-color: #457b9d;
+}
+
+/* 手機響應 */
+@media (max-width: 768px) {
+  .brand-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .brand-content {
+    max-width: 100%;
+  }
+}

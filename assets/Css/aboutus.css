@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.about-page {
+  padding: 160px 40px 80px; /* 避開 fixed header */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== 頁首 ===== */
+.about-hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.about-hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  color: #555;
+  font-size: 16px;
+}
+
+/* ===== 團隊成員 ===== */
+.team-section h2,
+.reflection-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  border-left: 6px solid #000;
+  padding-left: 12px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.member-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.member-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.member-card h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.member-card .role {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.member-card .desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===== 心得 ===== */
+.reflection-section {
+  margin-top: 100px;
+}
+
+.reflection-item {
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+}
+
+.reflection-item h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.reflection-item p {
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ===== RWD ===== */
+@media screen and (max-width: 600px) {
+  .about-page {
+    padding: 140px 20px 60px;
+  }
+}

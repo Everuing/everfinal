@@ -1,0 +1,90 @@
+/* 商品區背景色、置中 */
+.products {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: white; /* 米白色 */
+  border-radius: 12px;
+}
+
+.products h2 {
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+/* 水平滑動排版 */
+.product-row.horizontal-scroll {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  flex-wrap: nowrap;  /* 不換行 */
+  -webkit-overflow-scrolling: touch; /* 手機滑順 */
+}
+
+.product-row.horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.product-row.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* 商品卡片 */
+.product-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  padding: 20px 25px;
+  min-width: 300px;
+  transition: transform 0.3s;
+  flex-shrink: 0; /* 防止被壓縮 */
+}
+
+.product-card:hover {
+  transform: translateY(-7px);
+}
+
+/* 圖片 */
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+.product-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.product-card .price {
+  font-size: 20px;
+  color: #8b1721;
+  margin-bottom: 18px;
+}
+
+.product-card button {
+  padding: 12px 25px;
+  border: none;
+  background: #1d3557;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-card button:hover {
+  background: #457b9d;
+}
+
+/* 響應式 - 手機自動縮小 */
+@media (max-width: 768px) {
+  .product-card {
+    min-width: 250px;
+  }
+}
