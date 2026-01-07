@@ -1,0 +1,179 @@
+/* ===== Reset / 基本設定 ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.member-page {
+  padding-top: 140px;  /* 這個數值 = header 實際高度 */
+}
+
+
+body {
+  background-color: #f2f2f2;
+  height: 100vh;
+}
+
+/* ===== 整頁會員中心 ===== */
+.member-page {
+  display: flex;
+  height: 100vh;        /* 整個畫面高度 */
+  background-color: #fff;
+}
+
+/* ===== 左側會員選單 ===== */
+.member-menu {
+  width: 240px;
+  background-color: #111;
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.member-menu h2 {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.member-menu ul {
+  list-style: none;
+}
+
+.member-menu li {
+  padding: 12px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.member-menu li:hover {
+  background-color: #333;
+}
+
+.member-menu .active {
+  background-color: #fff;
+  color: #111;
+  font-weight: 600;
+}
+
+.member-menu .logout {
+  margin-top: 40px;
+  color: #ff6b6b;
+}
+
+/* ===== 右側內容區 ===== */
+.member-main {
+  flex: 1;
+  padding: 50px 60px;
+  background-color: #fafafa;
+}
+
+.member-main h1 {
+  font-size: 26px;
+  margin-bottom: 40px;
+}
+
+/* ===== 表單 ===== */
+.member-form {
+  max-width: 420px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.member-form button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.member-form button:hover {
+  opacity: 0.85;
+}
+.member-form input[disabled] {
+  background-color: #f5f5f5;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.form-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.member-section {
+  display: none;
+}
+
+.member-section.active {
+  display: block;
+}
+
+/* 訂單表格 */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+/* 收藏商品 */
+.favorite-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.favorite-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.favorite-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+/* 帳號設定 */
+.settings-box {
+  display: flex;
+  gap: 16px;
+}
+
+.settings-box .danger {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
