@@ -1,0 +1,363 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;          /* 撐滿整個螢幕寬度 */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px 40px;
+  background-color: white;
+  box-sizing: border-box;  /* 包含 padding 在內 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.logo img {
+  height: 75px;
+  width: 215px;
+}
+
+
+/* --- Menu --- */
+
+.nav > ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* dropdown */
+.dropdown {
+  position: relative;
+}
+
+/* 主選單 */
+.nav > ul > li > a {
+  text-decoration: none;
+  color: black;
+  padding: 15px 10px;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+/* 下拉選單樣式 (與 user-dropdown 一致) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+
+  display: none;
+  flex-direction: column;  /* ✔ 讓它變直的 */
+
+  list-style: none;
+  background: white;
+  padding: 10px 0;
+  width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,.2);
+  z-index: 100;
+}
+
+
+
+.dropdown-content li {
+  padding: 8px 16px;
+}
+
+.dropdown-content li a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li:hover {
+  background: #f2f2f2;
+}
+
+
+
+
+/* 顯示 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* --- Right side --- */
+
+.right-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+
+/* icons */
+.icons {
+  display: flex;
+  gap: 12px;
+}
+
+.icons .material-icons {
+  font-size: 32px; /* 變大 👍 */
+  color: black;
+  cursor: pointer;
+}
+
+
+/* 搜尋框 */
+.search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.search input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #aaaaaa;
+  outline: none;
+  width: 200px;
+}
+
+.search button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* 彈窗背景 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* 彈窗內容 */
+.modal-content {
+  width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  position: relative;
+  margin: 100px auto;
+  padding: 24px;
+  box-sizing: border-box;
+
+  /* 置中控件用 */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@keyframes popup {
+  from { transform: scale(.7); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* 關閉按鈕 */
+.close-btn {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 表單 */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;     /* 欄位之間距離更寬 */
+  margin-top: 10px;
+}
+
+
+.modal-content input {
+  padding: 16px;      /* 原本 12 ~ 14 可改大 */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  margin-bottom: 28px;
+}
+
+
+.modal-content button {
+  margin-top: 4px;
+  padding: 12px;
+  background: #333;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.modal-content button:hover {
+  background: #555;
+}
+
+/* user icon container */
+.user-menu {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.user-menu .material-icons {
+  font-size: 28px;
+  color: black;
+}
+
+/* hover dropdown (已修改 top 並加入 ::before 緩衝區) */
+.user-dropdown {
+  position: absolute;
+  top: 30px;                /* 稍微縮短距離，讓滑鼠更容易切換到選單 */
+  right: 0;
+  background: white;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,.2);
+  width: 160px;
+  display: none;
+  z-index: 100;
+}
+
+/* 新增：在選單上方建立一個透明的隱形橋樑，防止滑鼠移動過程中選單消失 */
+.user-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -15px;               /* 向上延伸覆蓋空隙 */
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: transparent;
+}
+
+.user-dropdown li {
+  padding: 8px 16px;
+}
+
+.user-dropdown li a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.user-dropdown li:hover {
+  background: #f2f2f2;
+}
+
+/* hover show menu */
+.user-menu:hover .user-dropdown {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  width: 450px;              /* ✔ 變更寬 */
+  background: #fff;
+  border-radius: 16px;
+  position: relative;
+  margin: 120px auto;
+  padding: 36px;             /* ✔ 更多留白 */
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;                 /* ✔ 控件間距更大 */
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: #007aff;       /* ✔ 改成藍色（更現代） */
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.modal-content button:hover {
+  background: #0064c9;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #666;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* ✔ switch 文字換顏色、加粗 */
+.switch-link {
+  text-align: center;
+  font-size: 15px;
+  color: #ff6b00;            /* 橘色，比較顯眼 */
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.switch-link:hover {
+  text-decoration: underline;
+}
+
+.ftc{
+  color: #0064c9;
+}
+.input-error {
+  border: 1.5px solid #ff4d4d !important;
+  background: #fff5f5 !important;
+}
