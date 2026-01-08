@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>門市資訊 - Everuing</title>
+    <link rel="stylesheet" href="../assets/Css/hp.css">
+    <link rel="stylesheet" href="../assets/Css/sp.css">
+    <link rel="stylesheet" href="../assets/Css/sp2.css">
+    <link rel="stylesheet" href="../assets/Css/sp3.css">
+    <link rel="stylesheet" href="../assets/Css/fp.css">
+    <link rel="stylesheet" href="../assets/Css/cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* 門市頁專屬樣式 */
+        .shop-hero {
+            padding: 130px 20px 60px 20px; /* 避開固定 Header */
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+        .shop-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .shop-card {
+            border: 1px solid #eee;
+            padding: 25px;
+            text-align: left;
+            transition: 0.3s;
+            background: #fff;
+            border-radius: 4px;
+        }
+        .shop-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+            border-color: #333;
+        }
+        .shop-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+            border-left: 4px solid #333;
+            padding-left: 12px;
+        }
+        .shop-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .shop-info .material-icons {
+            font-size: 20px;
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <a href="index.html"><img src="../assets/Images/iconwhite.png" alt="Logo"></a>
+  </div>
+  <nav class="nav">
+    <ul>
+      <li><a href="list.html">全部商品</a></li>
+      <li><a href="activity.html">最新活動</a></li>
+      <li><a href="brand.html">品牌導覽</a></li>
+      <li><a href="costomer.html">會員需知</a></li>
+      <li><a href="shop.html" style="color: #ffd700;">門市</a></li>
+    </ul>
+  </nav>
+  <div class="right-box">
+    <div class="big">
+      <div class="user-menu">
+        <span class="material-icons">person</span>
+        <ul class="user-dropdown">
+          <li><a href="personinformation.html">會員專區</a></li>
+          <li><a href="#" id="open-login">會員登入 / 註冊</a></li>
+        </ul>
+      </div>
+      <span class="material-icons" style="cursor:pointer">shopping_cart</span>
+    </div>
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="搜尋門市...">
+      <button>搜尋</button>
+    </div>
+  </div>
+</header>
+
+<div class="modal" id="auth-modal">
+  <div class="modal-content">
+    <span class="close-btn" id="close-auth">&times;</span>
+    <div class="login-box">
+      <h2>會員登入</h2>
+      <input type="email" placeholder="Email" required id="login-email">
+      <input type="password" placeholder="密碼" required id="login-password">
+      <button id="login-btn">登入</button>
+      <p class="switch">還沒有帳號？ <span id="to-register" class="ftc">立即註冊</span></p>
+    </div>
+  </div>
+</div>
+
+<div class="cart-modal" id="cart-modal">
+  <div class="cart-content">
+    <span class="close-cart" id="close-cart">&times;</span>
+    <h2>購物車</h2>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+      <p class="total">總計：NT$0</p>
+      <button class="checkout">前往結帳</button>
+    </div>
+  </div>
+</div>
+
+<section class="shop-hero">
+    <h1>Stores Location</h1>
+    <p>尋找全台離您最近的 Everuing 體驗門市</p>
+</section>
+
+<main class="shop-container">
+    <div class="shop-grid">
+        <div class="shop-card">
+            <h3>台北信義旗艦店</h3>
+            <div class="shop-info"><span class="material-icons">location_on</span> 台北市信義區松壽路 12 號</div>
+            <div class="shop-info"><span class="material-icons">phone</span> (02) 2722-1234</div>
+            <div class="shop-info"><span class="material-icons">schedule</span> 11:00 - 22:00</div>
+        </div>
+        <div class="shop-card">
+            <h3>桃園中壢門市</h3>
+            <div class="shop-info"><span class="material-icons">location_on</span> 桃園市中壢區中正路 51 號</div>
+            <div class="shop-info"><span class="material-icons">phone</span> (03) 422-5678</div>
+            <div class="shop-info"><span class="material-icons">schedule</span> 11:00 - 21:30</div>
+        </div>
+        <div class="shop-card">
+            <h3>新竹巨城店</h3>
+            <div class="shop-info"><span class="material-icons">location_on</span> 新竹市東區中央路 229 號</div>
+            <div class="shop-info"><span class="material-icons">phone</span> (03) 533-8888</div>
+            <div class="shop-info"><span class="material-icons">schedule</span> 11:00 - 22:00</div>
+        </div>
+        <div class="shop-card">
+            <h3>台中勤美概念店</h3>
+            <div class="shop-info"><span class="material-icons">location_on</span> 台中市西區公益路 68 號</div>
+            <div class="shop-info"><span class="material-icons">phone</span> (04) 2328-1000</div>
+            <div class="shop-info"><span class="material-icons">schedule</span> 11:00 - 22:00</div>
+        </div>
+        <div class="shop-card">
+            <h3>彰化市區門市</h3>
+            <div class="shop-info"><span class="material-icons">location_on</span> 彰化縣彰化市光復路 129 號</div>
+            <div class="shop-info"><span class="material-icons">phone</span> (04) 722-3344</div>
+            <div class="shop-info"><span class="material-icons">schedule</span> 12:00 - 21:00</div>
+        </div>
+        <div class="shop-card">
+            <h3>嘉義中山門市</h3>
+            <div class="shop-info"><span class="material-icons">location_on</span> 嘉義市東區中山路 300 號</div>
+            <div class="shop-info"><span class="material-icons">phone</span> (05) 225-8899</div>
+            <div class="shop-info"><span class="material-icons">schedule</span> 11:30 - 21:30</div>
+        </div>
+        <div class="shop-card">
+            <h3>台南西門概念店</h3>
+            <div class="shop-info"><span class="material-icons">location_on</span> 台南市中西區西門路一段 658 號</div>
+            <div class="shop-info"><span class="material-icons">phone</span> (06) 303-0999</div>
+            <div class="shop-info"><span class="material-icons">schedule</span> 11:00 - 22:00</div>
+        </div>
+        <div class="shop-card">
+            <h3>高雄漢神巨蛋店</h3>
+            <div class="shop-info"><span class="material-icons">location_on</span> 高雄市左營區博愛二路 777 號</div>
+            <div class="shop-info"><span class="material-icons">phone</span> (07) 555-9168</div>
+            <div class="shop-info"><span class="material-icons">schedule</span> 11:00 - 22:00</div>
+        </div>
+        <div class="shop-card">
+            <h3>宜蘭新月門市</h3>
+            <div class="shop-info"><span class="material-icons">location_on</span> 宜蘭縣宜蘭市民權路二段 38 巷 6 號</div>
+            <div class="shop-info"><span class="material-icons">phone</span> (03) 932-8877</div>
+            <div class="shop-info"><span class="material-icons">schedule</span> 11:00 - 21:30</div>
+        </div>
+        <div class="shop-card">
+            <h3>花蓮形象店</h3>
+            <div class="shop-info"><span class="material-icons">location_on</span> 花蓮縣花蓮市中山路 550 號</div>
+            <div class="shop-info"><span class="material-icons">phone</span> (03) 833-1122</div>
+            <div class="shop-info"><span class="material-icons">schedule</span> 11:00 - 21:00</div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>Everuing</h3>
+      <p>© 2025 Brand Name. All rights reserved.</p>
+      <p>客服信箱: support@brand.com</p>
+      <p>電話: +886 2 1234 5678</p>
+    </div>
+    <div class="footer-center">
+      <h4>快速連結</h4>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="list.html">商品分類</a></li>
+        <li><a href="activity.html">最新活動</a></li>
+        <li><a href="brand.html">品牌導覽</a></li>
+        <li><a href="shop.html">門市資訊</a></li>
+      </ul>
+    </div>
+    <div class="footer-right">
+      <h4>追蹤我們</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/1AxSiFKYB9/"><img src="../assets/Images/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/_hsin.10/"><img src="../assets/Images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.line.me/tw/"><img src="../assets/Images/line.png" alt="Line"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/Js/cart.js"></script>
+<script>
+  // 彈窗與購物車邏輯 (與 index.html 同步)
+  const openLogin = document.getElementById("open-login");
+  const modal = document.getElementById("auth-modal");
+  const closeAuth = document.getElementById("close-auth");
+  
+  if (openLogin) {
+    openLogin.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.style.display = "flex";
+    });
+  }
+  if (closeAuth) closeAuth.addEventListener("click", () => { modal.style.display = "none"; });
+</script>
+
+</body>
+</html>

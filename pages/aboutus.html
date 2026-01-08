@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+
+  <link rel="stylesheet" href="../assets/Css/hp.css">
+
+  <link rel="stylesheet" href="../assets/Css/aboutus.css">
+  <link rel="stylesheet" href="../assets/Css/cart.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header">
+  <div class="logo">
+    <a href="index.html"><img src="../assets/Images/iconwhite.png" alt="Logo"></a>
+    
+  </div>
+
+  <nav class="nav">
+    <ul>
+      <li class="dropdown">
+        <a href="list.html" class="dropdown-toggle">全部商品</a>
+        
+      </li>
+
+
+      <li class="dropdown">
+        <a href="activity.html">最新活動</a>
+        
+      </li>
+
+      <li class="dropdown">
+        <a href="brand.html">品牌導覽</a>
+        
+      </li>
+
+      <li class="dropdown">
+        <a href="costomer.html">會員需知</a>
+        
+      </li>
+
+      <li class="dropdown">
+        <a href="shop.html">門市</a>
+        
+      </li>
+    </ul>
+  </nav>
+
+
+  <div class="right-box">
+
+    <div class="big">
+
+
+      <div class="user-menu">
+        <span class="material-icons">person</span>
+
+        <ul class="user-dropdown">
+          <li><a href="personinformation.html">會員專區</a></li>
+          <li><a href="#" id="open-login">會員登入 / 註冊</a></li>
+        </ul>
+      </div>
+
+      <span class="material-icons" id="cart-icon">shopping_cart</span>
+
+    </div>
+
+    
+    <div class="modal" id="auth-modal">
+      <div class="modal-content">
+
+        <span class="close-btn" id="close-auth">&times;</span>
+
+        <div class="login-box">
+          <h2>會員登入</h2>
+          <input type="email" placeholder="Email" required id="login-email">
+          <input type="password" placeholder="密碼" required id="login-password">
+          <button id="login-btn">登入</button>
+
+          <p class="switch">還沒有帳號？ <span id="to-register"  class="ftc">立即註冊</span></p>
+        </div>
+
+        <div class="register-box" style="display:none;">
+          <h2>會員註冊</h2>
+          <input type="text" placeholder="姓名" required id="register-name">
+          <input type="email" placeholder="Email" required id="register-email">
+          <input type="password" placeholder="密碼" required id="register-password">
+          <button id="register-btn">註冊</button>
+
+          <p class="switch">已有帳號？ <span id="to-login" class="ftc">登入</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    
+
+    <div class="search">
+      <input type="text" placeholder="搜尋商品...">
+      <button>搜尋</button>
+    </div>
+
+  </div>
+
+</header>
+
+<div class="cart-modal" id="cart-modal">
+  <div class="cart-content">
+    <span class="close-cart" id="close-cart">&times;</span>
+    <h2>購物車</h2>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+      <p class="total">總計：NT$0</p>
+      <button class="checkout">前往結帳</button>
+    </div>
+  </div>
+</div>
+
+  <main class="about-main">
+    
+    <section class="intro-section">
+      <h1>關於我們</h1>
+      <p>我們是一個充滿熱情的團隊，致力於為客戶提供最優質的服務與創新解決方案。</p>
+    </section>
+
+    <section class="team-section">
+      <h2>核心成員</h2>
+      <div class="team-container">
+        
+        <div class="member-card">
+          <img src="../assets/Images/hsin.jpg" alt="member">
+          <h3>謝信棠</h3>
+          <p class="role">前端開發</p>
+          <p class="desc">負責網頁版面設計與切版、整體視覺呈現。</p>
+        </div>
+
+        <div class="member-card">
+          <img src="../assets/Images/bochang.jpg" alt="member">
+          <h3>陳柏蒼</h3>
+          <p class="role">架構構思</p>
+          <p class="desc">負責每個頁面的設計架構、整體的框架構思。</p>
+        </div>
+
+        <div class="member-card">
+          <img src="../assets/Images/bobh.jpg" alt="member">
+          <h3>謝博仁</h3>
+          <p class="role">企劃與測試</p>
+          <p class="desc">負責專題企劃、使用者流程與測試紀錄、進度回報。。</p>
+        </div>
+
+        <div class="member-card">
+          <img src="../assets/Images/uche.jpg" alt="member">
+          <h3>陳與喆</h3>
+          <p class="role">資源整理</p>
+          <p class="desc">負責主題構想，網站設計參考和圖片等資源。</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="reflection-section">
+      <h2>成員心得</h2>
+
+      <div class="reflection-item">
+        <h4>謝信棠</h4>
+        <p>
+          好玩讚讚。
+        </p>
+      </div>
+
+      <div class="reflection-item">
+        <h4>陳柏蒼</h4>
+        <p>
+          這真是場酣暢淋灕的期末
+        </p>
+      </div>
+
+      <div class="reflection-item">
+        <h4>謝博仁</h4>
+        <p>
+          我會好好測試。
+        </p>
+      </div>
+
+      <div class="reflection-item">
+        <h4>陳與喆</h4>
+        <p>
+          我會好好找資源。
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-left">
+      <h3>Everuing</h3>
+      <p>© 2025 Brand Name. All rights reserved.</p>
+      <p>客服信箱: support@brand.com</p>
+      <p>電話: +886 2 1234 5678</p>
+    </div>
+
+    <div class="footer-center">
+      <h4>快速連結</h4>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="list.html">商品分類</a></li>
+        <li><a href="activity.html">最新活動</a></li>
+        <li><a href="aboutus.html">品牌介紹</a></li>
+        <li><a href="shop.html">門市資訊</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-right">
+      <h4>追蹤我們</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/1AxSiFKYB9/"><img src="../assets/Images/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/_hsin.10/"><img src="../assets/Images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.line.me/tw/"><img src="../assets/Images/line.png" alt="Line"></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <script>
+    const openLogin = document.getElementById("open-login");
+    const modal = document.getElementById("auth-modal");
+    const closeAuth = document.getElementById("close-auth");
+
+    const loginBox = document.querySelector(".login-box");
+    const registerBox = document.querySelector(".register-box");
+
+    const toRegister = document.getElementById("to-register");
+    const toLogin = document.getElementById("to-login");
+
+    // 打開視窗
+    if (openLogin) {
+      openLogin.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.style.display = "flex";
+        loginBox.style.display = "block";
+        registerBox.style.display = "none";
+      });
+    }
+
+    // 關閉視窗
+    if (closeAuth) {
+      closeAuth.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+    }
+
+    // 點擊背景關閉
+    window.addEventListener("click", e => {
+      if (e.target === modal) modal.style.display = "none";
+    });
+
+    // 切換註冊/登入
+    if (toRegister) {
+      toRegister.addEventListener("click", () => {
+        loginBox.style.display = "none";
+        registerBox.style.display = "block";
+      });
+    }
+    if (toLogin) {
+      toLogin.addEventListener("click", () => {
+        loginBox.style.display = "block";
+        registerBox.style.display = "none";
+      });
+    }
+
+    // 登入按鈕
+    const loginBtn = document.getElementById("login-btn");
+    if (loginBtn) {
+      loginBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        alert("登入成功！");
+        window.location.href = "index.html";
+      });
+    }
+  </script>
+  <script src="../assets/Js/cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>垂直商品頁面</title>
+  <link rel="stylesheet" href="../assets/Css/hp.css">
+    <link rel="stylesheet" href="../assets/Css/sp.css">
+    <link rel="stylesheet" href="../assets/Css/list.css">
+    <link rel="stylesheet" href="../assets/Css/sp2.css">
+    <link rel="stylesheet" href="../assets/Css/sp3.css">
+    <link rel="stylesheet" href="../assets/Css/fp.css">
+    <link rel="stylesheet" href="../assets/Css/cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <a href="index.html"><img src="../assets/Images/iconwhite.png" alt="Logo"></a>
+    
+  </div>
+
+  <nav class="nav">
+    <ul>
+      <li class="dropdown">
+        <a href="list.html" class="dropdown-toggle">全部商品</a>
+        
+      </li>
+
+
+      <li class="dropdown">
+        <a href="activity.html">最新活動</a>
+        
+      </li>
+
+      <li class="dropdown">
+        <a href="brand.html">品牌導覽</a>
+        
+      </li>
+
+      <li class="dropdown">
+        <a href="costomer.html">會員需知</a>
+        
+      </li>
+
+      <li class="dropdown">
+        <a href="shop.html">門市</a>
+        
+      </li>
+    </ul>
+  </nav>
+
+  <div class="right-box">
+
+    <div class="big">
+
+
+      <div class="user-menu">
+        <span class="material-icons">person</span>
+
+        <ul class="user-dropdown">
+          <li><a href="personinformation.html">會員專區</a></li>
+          <li><a href="#" id="open-login">會員登入 / 註冊</a></li>
+        </ul>
+      </div>
+
+      <span class="material-icons">shopping_cart</span>
+
+    </div>
+
+    
+    <div class="modal" id="auth-modal">
+      <div class="modal-content">
+
+        <span class="close-btn" id="close-auth">&times;</span>
+
+        <div class="login-box">
+          <h2>會員登入</h2>
+          <input type="email" placeholder="Email" required id="login-email">
+          <input type="password" placeholder="密碼" required id="login-password">
+          <button id="login-btn">登入</button>
+
+          <p class="switch">還沒有帳號？ <span id="to-register"  class="ftc">立即註冊</span></p>
+        </div>
+
+        <div class="register-box" style="display:none;">
+          <h2>會員註冊</h2>
+          <input type="text" placeholder="姓名" required id="register-name">
+          <input type="email" placeholder="Email" required id="register-email">
+          <input type="password" placeholder="密碼" required id="register-password">
+          <button id="register-btn">註冊</button>
+
+          <p class="switch">已有帳號？ <span id="to-login" class="ftc">登入</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    
+
+    <div class="search">
+      <input type="text" placeholder="搜尋商品...">
+      <button>搜尋</button>
+    </div>
+
+  </div>
+
+
+</header>
+
+
+
+<div class="cart-modal" id="cart-modal">
+  <div class="cart-content">
+    <span class="close-cart" id="close-cart">&times;</span>
+    <h2>購物車</h2>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+      <p class="total">總計：NT$0</p>
+      <button class="checkout">前往結帳</button>
+    </div>
+  </div>
+</div>
+
+<div class="shop-container">
+
+  <aside class="category-sidebar">
+    <nav class="category-nav">
+      <a href="list.html" class="category-item">所有商品</a>
+
+      <div class="category-group">
+        <div class="category-parent">Yoneyama Mai</div>
+        <a href="listn.html" class="category-child"  style="color:#2980b9">
+          Yoneyama Mai
+        </a>
+        <a href="lists.html" class="category-child">
+          Yoneyama Mai - s
+        </a>
+
+      </div>
+    </nav>
+  </aside>
+
+  <div class="container">
+    <div class="container">
+  <div class="product-card">
+    <a href="item1.html"><img src="../assets/Images/misan.png" alt="商品1"></a>
+    <div class="product-info">
+      <h3>Yoneyama Mai-1</h3>
+      <p class="price">NT$550</p>   
+      <button>加入購物車</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="item2.html"><img src="../assets/Images/misan2.png" alt="商品2"></a>
+    <div class="product-info">
+      <h3>Yoneyama Mai-2</h3>
+      <p class="price">NT$750</p>
+      <button>加入購物車</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="item3.html"><img src="../assets/Images/misan3.png" alt="商品2"></a>
+    <div class="product-info">
+      <h3>Yoneyama Mai-3</h3>
+      <p class="price">NT$400</p>
+      <button>加入購物車</button>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <a href="item4.html"><img src="../assets/Images/misan4.png" alt="商品2"></a>
+    <div class="product-info">
+      <h3>Yoneyama Mai-4</h3>
+      <p class="price">NT$500</p>
+      <button>加入購物車</button>
+    </div>
+  </div>
+    <div class="product-card">
+    <a href="item5.html"><img src="../assets/Images/misna5.png" alt="商品2"></a>
+    <div class="product-info">
+      <h3>Yoneyama Mai-5</h3>
+      <p class="price">NT$500</p>
+      <button>加入購物車</button>
+    </div>
+  </div>
+    <div class="product-card">
+    <a href="item6.html"><img src="../assets/Images/misan6.png" alt="商品2"></a>
+    <div class="product-info">
+      <h3>Yoneyama Mai-6</h3>
+      <p class="price">NT$500</p>
+      <button>加入購物車</button>
+    </div>
+  </div>
+    <div class="product-card">
+    <a href="item7.html"><img src="../assets/Images/m7.png" alt="商品2"></a>
+    <div class="product-info">
+      <h3>Yoneyama Mai-7</h3>
+      <p class="price">NT$500</p>
+      <button>加入購物車</button>
+    </div>
+  </div>
+    <div class="product-card">
+    <a href="item8.html"><img src="../assets/Images/m8.png" alt="商品2"></a>
+    <div class="product-info">
+      <h3>Yoneyama Mai-8</h3>
+      <p class="price">NT$500</p>
+      <button>加入購物車</button>
+    </div>
+  </div>
+
+
+</div>
+  </div>
+
+</div>
+
+
+
+<script src="../assets/Js/cart.js"></script>
+
+</body>
+</html>

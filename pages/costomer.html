@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員須知 - Everuing</title>
+    <link rel="stylesheet" href="../assets/Css/hp.css">
+    <link rel="stylesheet" href="../assets/Css/sp.css">
+    <link rel="stylesheet" href="../assets/Css/sp2.css">
+    <link rel="stylesheet" href="../assets/Css/sp3.css">
+    <link rel="stylesheet" href="../assets/Css/fp.css">
+    <link rel="stylesheet" href="../assets/Css/cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* 會員須知頁面專屬樣式 */
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 130px 20px 80px 20px; /* 修正導覽列遮擋 */
+            line-height: 1.8;
+            color: #333;
+        }
+        .page-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1a1a1a;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+        .info-section {
+            margin-bottom: 40px;
+        }
+        .info-section h2 {
+            font-size: 1.4rem;
+            color: #2980b9;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .info-section p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .info-section ul {
+            padding-left: 20px;
+            list-style-type: disc;
+            color: #666;
+        }
+        .info-section ul li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <a href="index.html"><img src="../assets/Images/iconwhite.png" alt="Logo"></a>
+  </div>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="list.html">全部商品</a></li>
+      <li><a href="activity.html">最新活動</a></li>
+      <li><a href="brand.html">品牌導覽</a></li>
+      <li><a href="costomer.html" style="color: #ffd700;">會員須知</a></li>
+      <li><a href="shop.html">門市</a></li>
+    </ul>
+  </nav>
+
+  <div class="right-box">
+    <div class="big">
+      <div class="user-menu">
+        <span class="material-icons">person</span>
+        <ul class="user-dropdown">
+          <li><a href="personinformation.html">會員專區</a></li>
+          <li><a href="#" id="open-login">會員登入 / 註冊</a></li>
+        </ul>
+      </div>
+      <span class="material-icons" style="cursor:pointer">shopping_cart</span>
+    </div>
+
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="搜尋商品...">
+      <button>搜尋</button>
+    </div>
+  </div>
+</header>
+
+<div class="modal" id="auth-modal">
+  <div class="modal-content">
+    <span class="close-btn" id="close-auth">&times;</span>
+    <div class="login-box">
+      <h2>會員登入</h2>
+      <input type="email" placeholder="Email" required id="login-email">
+      <input type="password" placeholder="密碼" required id="login-password">
+      <button id="login-btn">登入</button>
+      <p class="switch">還沒有帳號？ <span id="to-register" class="ftc">立即註冊</span></p>
+    </div>
+    <div class="register-box" style="display:none;">
+      <h2>會員註冊</h2>
+      <input type="text" placeholder="姓名" required id="register-name">
+      <input type="email" placeholder="Email" required id="register-email">
+      <input type="password" placeholder="密碼" required id="register-password">
+      <button id="register-btn">註冊</button>
+      <p class="switch">已有帳號？ <span id="to-login" class="ftc">登入</span></p>
+    </div>
+  </div>
+</div>
+
+<div class="cart-modal" id="cart-modal">
+  <div class="cart-content">
+    <span class="close-cart" id="close-cart">&times;</span>
+    <h2>購物車</h2>
+    <div class="cart-items"></div>
+    <div class="cart-footer">
+      <p class="total">總計：NT$0</p>
+      <button class="checkout">前往結帳</button>
+    </div>
+  </div>
+</div>
+
+<main class="content-container">
+    <h1 class="page-title">會員須知</h1>
+
+    <section class="info-section">
+        <h2><span class="material-icons">shopping_bag</span> 購物流程</h2>
+        <p>1. 選擇商品：瀏覽網頁，將心儀的商品加入購物車。</p>
+        <p>2. 確認清單：點擊右上角購物車，確認規格與數量。</p>
+        <p>3. 結帳付款：選擇運送方式與填寫收件資訊。</p>
+        <p>4. 訂單成立：完成付款後，我們將盡快為您安排出貨。</p>
+    </section>
+
+    <section class="info-section">
+        <h2><span class="material-icons">payments</span> 付款方式</h2>
+        <ul>
+            <li>線上刷卡（支援 Visa, Master, JCB）</li>
+            <li>ATM 轉帳投幣</li>
+            <li>超商代碼繳費 / 超商取貨付款</li>
+            <li>LINE Pay / 街口支付</li>
+        </ul>
+    </section>
+
+    <section class="info-section">
+        <h2><span class="material-icons">local_shipping</span> 運送政策</h2>
+        <ul>
+            <li>宅配：出貨後 1-2 個工作天抵達。</li>
+            <li>超商取貨：出貨後 2-3 個工作天到達指定門市。</li>
+            <li>全館滿 NT$2,000 享免運優惠。</li>
+        </ul>
+    </section>
+
+    <section class="info-section">
+        <h2><span class="material-icons">assignment_return</span> 退換貨說明</h2>
+        <p>
+            根據消費者保護法，您享有商品到貨七天猶豫期（非試用期）之權益。
+            若商品有瑕疵或錯誤，請於收到商品七日內聯繫客服辦理退換貨。
+        </p>
+    </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>Everuing</h3>
+      <p>© 2025 Brand Name. All rights reserved.</p>
+      <p>客服信箱: support@brand.com</p>
+      <p>電話: +886 2 1234 5678</p>
+    </div>
+
+    <div class="footer-center">
+      <h4>快速連結</h4>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="list.html">商品分類</a></li>
+        <li><a href="activity.html">最新活動</a></li>
+        <li><a href="brand.html">品牌導覽</a></li>
+        <li><a href="shop.html">門市資訊</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-right">
+      <h4>追蹤我們</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/1AxSiFKYB9/"><img src="../assets/Images/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/_hsin.10/"><img src="../assets/Images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.line.me/tw/"><img src="../assets/Images/line.png" alt="Line"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/Js/cart.js"></script>
+<script>
+  // 彈窗控制邏輯 (與 index.html 同步)
+  const openLogin = document.getElementById("open-login");
+  const modal = document.getElementById("auth-modal");
+  const closeAuth = document.getElementById("close-auth");
+  const loginBox = document.querySelector(".login-box");
+  const registerBox = document.querySelector(".register-box");
+  const toRegister = document.getElementById("to-register");
+  const toLogin = document.getElementById("to-login");
+
+  if (openLogin) {
+    openLogin.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.style.display = "flex";
+      loginBox.style.display = "block";
+      registerBox.style.display = "none";
+    });
+  }
+
+  closeAuth.addEventListener("click", () => { modal.style.display = "none"; });
+  modal.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
+  toRegister.addEventListener("click", () => { loginBox.style.display = "none"; registerBox.style.display = "block"; });
+  toLogin.addEventListener("click", () => { loginBox.style.display = "block"; registerBox.style.display = "none"; });
+</script>
+
+</body>
+</html>
